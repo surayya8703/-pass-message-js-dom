@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass the message</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        .container{
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .allMess{
+            background-color: rgb(190, 134, 134);
+            border: 1px solid transparent;
+            color: white;
+            padding: 50px;
+            border-radius: 50px;
+        }
+        h2, h3{
+            margin: 20px;
+        }
+        #passBtn{
+            background-color: crimson;
+            padding: 8px;
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 20px;
+        }
+        h2{
+            text-align: center;
+        }
+        #textInput,#passBtn{
+            display: flex;
+            flex-direction: column;
+            margin: 5px;
+            text-align: center;
+            align-items: center;
+
+        }
+</style>
+<body>  
+    <div class="container">
+        <div class="allMess">
+            <h1>Message</h1>
+            <textarea id="textInput" cols="30" rows="6"></textarea>
+            <button id="passBtn">Pass Message</button>
+            <h2>Your Message</h2>
+            <div class="messPass">
+                <h3><b><i id=passMe></i></b></h3>
+            </div>
+        </div>
+    </div>
+    <script>
+            let passBtn= document.getElementById("passBtn");
+            passBtn.addEventListener("click", function() {
+                let textInput = document.getElementById("textInput").value;
+                let passMe = document.getElementById("passMe");
+               passMe.innerHTML = "=>"+textInput;
+            
+    </script>
+</body>
+</html>
